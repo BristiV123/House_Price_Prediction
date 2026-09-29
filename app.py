@@ -110,7 +110,7 @@ if target_column not in df.columns:
 numeric_columns = df.select_dtypes(
     include=np.number
 ).columns.tolist()
-
+numeric_features = numeric_columns.copy()
 
 feature_columns = [
     col
