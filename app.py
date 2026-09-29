@@ -303,13 +303,7 @@ page = st.sidebar.radio(
 
         "💰 Price Prediction",
 
-        "📝 Prediction History",
-        "📄 Prediction Report",
-        "🤖 AI House Price Assistant"
-
-    ]
-
-)
+       st.header("📝 Prediction History")
 
 
 # =========================================================
