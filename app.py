@@ -280,7 +280,7 @@ page = st.sidebar.radio(
 
     "Select Page",
 
-    [
+    
 
         "📊 Dashboard",
 
@@ -304,6 +304,7 @@ page = st.sidebar.radio(
         "💰 Price Prediction",
 
        st.header("📝 Prediction History")
+)
 
 
 # =========================================================
