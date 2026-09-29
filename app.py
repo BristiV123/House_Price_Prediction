@@ -1,3 +1,4 @@
+import html
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -110,7 +111,9 @@ if target_column not in df.columns:
 numeric_columns = df.select_dtypes(
     include=np.number
 ).columns.tolist()
+
 numeric_features = numeric_columns.copy()
+
 
 feature_columns = [
     col
@@ -280,7 +283,7 @@ page = st.sidebar.radio(
 
     "Select Page",
 
-    
+    [
 
         "📊 Dashboard",
 
@@ -303,7 +306,12 @@ page = st.sidebar.radio(
 
         "💰 Price Prediction",
 
-       st.header("📝 Prediction History")
+        "📝 Prediction History",
+        "📄 Prediction Report",
+        "🤖 AI House Price Assistant"
+
+    ]
+
 )
 
 
@@ -1823,7 +1831,6 @@ elif page == "💰 Price Prediction":
 
 elif page == "📄 Prediction Report":
 
-
     st.header("📄 Automatic Prediction Report")
 
     report = st.session_state.last_prediction_report
@@ -2079,11 +2086,7 @@ elif page == "🤖 AI House Price Assistant":
 
 elif page == "📝 Prediction History":
 
-    st.header(
-        "📝 Prediction History",
-        "📄 Prediction Report",
-        "🤖 AI House Price Assistant"
-    )
+    st.header("📝 Prediction History")
 
 
     if len(
